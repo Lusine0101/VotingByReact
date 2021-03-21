@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import './ListOfLanguages/Vote';
+import Vote from "./ListOfLanguages/Vote";
 
 function App() {
+  const lang = [ 'Java', 'Ruby', 'C++ ' , ' C# ']
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+
+          {lang.map((el) => (
+              <Vote  key={el} langName = {el} />
+              ))}
+      </>
+
   );
 }
 
